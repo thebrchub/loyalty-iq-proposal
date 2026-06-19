@@ -2,13 +2,15 @@ import { motion } from 'framer-motion';
 import { 
   CheckCircle2, 
   Globe, 
-  Mail, 
   LayoutDashboard, 
   Bot, 
   XCircle, 
   AlertCircle,
-  Info
+  Info,
+  DatabaseZap,
+  Layers
 } from 'lucide-react';
+import { proposalData } from '../../data/proposalData';
 
 type DeliverableItem = string | { text: string; tooltip: string };
 
@@ -30,15 +32,15 @@ const inScopeItems: { title: string; icon: any; color: string; bgColor: string; 
     ]
   },
   {
-    title: "Gmail Data Extraction Engine",
-    icon: Mail,
+    title: "Hybrid Data Extraction Engine",
+    icon: DatabaseZap,
     color: "text-rose-600",
     bgColor: "bg-rose-50",
     borderColor: "border-rose-100",
     items: [
+      "Live web scraping logic for real-time portal balances.",
       "Secure Google OAuth 2.0 Integration (Read-Only).",
-      "90-day lookback window for historical statements.",
-      "Automated PDF & SMS extraction via Python."
+      "Automated PDF statement & SMS extraction via Python."
     ]
   },
   {
@@ -64,18 +66,18 @@ const inScopeItems: { title: string; icon: any; color: string; bgColor: string; 
     borderColor: "border-sky-100",
     items: [
       "Natural language assistant for loyalty queries.",
-      "Context-aware responses based on extracted Gmail data.",
-      "Strict data normalization via OpenAI/Gemini."
+      "Context-aware responses based on extracted user data.",
+      "Strict data normalization via OpenAI/Gemini API calling."
     ]
   }
 ];
 
 const outOfScopeItems = [
   "Native Android & iOS Apps (App Store / Play Store listing).",
-  "Live Portal Scrapers (Direct logins to bank/airline portals).",
   "Full reward optimizer with transaction-level analysis.",
-  "Live, production payment processing for real transactions.",
-  "Production-scale backend infrastructure for mass public use."
+  "Live, production payment processing for real financial transactions.",
+  "Production-scale backend infrastructure for mass public use.",
+  "Enterprise admin systems, audit logs, or operational tooling."
 ];
 
 export function Deliverables() {
@@ -86,12 +88,12 @@ export function Deliverables() {
         <div className="max-w-3xl">
           <h2 className="text-4xl font-extrabold text-slate-900 tracking-tight">Scope & Deliverables</h2>
           <p className="text-slate-600 mt-3 text-lg leading-relaxed">
-            A clear breakdown of exactly what is included in the ₹5,50,000 Investor Prototype. We have strategically scoped this to maximize boardroom impact while aggressively reducing your initial cost.
+            A clear breakdown of exactly what is included in the ₹5,35,000 Investor Prototype. We have strategically scoped this to maximize boardroom impact and validate the core product vision.
           </p>
         </div>
       </div>
 
-      {}
+      {/* Strategic Callouts */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-indigo-50/50 border border-indigo-100 rounded-2xl p-6 flex gap-4">
           <div className="shrink-0 mt-1">
@@ -107,18 +109,18 @@ export function Deliverables() {
 
         <div className="bg-rose-50/50 border border-rose-100 rounded-2xl p-6 flex gap-4">
           <div className="shrink-0 mt-1">
-            <Mail className="w-6 h-6 text-rose-600" />
+            <DatabaseZap className="w-6 h-6 text-rose-600" />
           </div>
           <div>
-            <h4 className="font-bold text-slate-900 mb-1">Gmail Parsing Architecture</h4>
+            <h4 className="font-bold text-slate-900 mb-1">Hybrid Data Architecture</h4>
             <p className="text-sm text-slate-600 leading-relaxed">
-              As established from the project's inception, we are relying exclusively on secure Gmail parsing (statements & emails) to populate the dashboard. Live, direct scrapers for individual bank and airline portals are excluded from this prototype phase.
+              We employ a dual-pronged data strategy: Python-based live web scrapers to fetch real-time bank/airline point balances, combined with secure Gmail parsing to extract historical PDFs, transaction details, and credit card profiles.
             </p>
           </div>
         </div>
       </div>
 
-      {}
+      {/* In-Scope Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {inScopeItems.map((group, index) => {
           const Icon = group.icon;
@@ -151,7 +153,6 @@ export function Deliverables() {
                         </span>
                         <Info className="w-4 h-4 text-slate-400 group-hover:text-indigo-500 transition-colors" />
                         
-                        {}
                         <div className="absolute bottom-full left-0 md:left-1/2 md:-translate-x-1/2 mb-3 w-64 p-3 bg-slate-900 text-white text-xs leading-relaxed rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-xl pointer-events-none">
                           {item.tooltip}
                           <div className="absolute -bottom-1 left-6 md:left-1/2 md:-translate-x-1/2 w-3 h-3 bg-slate-900 rotate-45" />
@@ -167,7 +168,48 @@ export function Deliverables() {
         })}
       </div>
 
-      {}
+      {/* Prototype Interface Scope */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="bg-white border border-slate-200 rounded-3xl p-8 md:p-10 shadow-sm overflow-hidden"
+      >
+        <div className="flex items-center gap-3 mb-8 border-b border-slate-100 pb-6">
+          <Layers className="w-7 h-7 text-indigo-600" />
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900">Prototype Interface Scope</h3>
+            <p className="text-slate-500 text-sm mt-1">18-20 unique interfaces required to demonstrate the complete core user journey.</p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {proposalData.prototypeInterfaces?.map((section, idx) => (
+            <div key={idx} className="bg-slate-50 border border-slate-100 rounded-2xl p-5">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-bold text-slate-800 text-base">{section.category}</h4>
+                <span className="bg-indigo-100 text-indigo-700 text-xs font-bold px-2 py-1 rounded-md">
+                  {section.count}
+                </span>
+              </div>
+              <ul className="space-y-2.5 mt-4">
+                {section.screens.map((screen, sIdx) => (
+                  <li key={sIdx} className="text-slate-700 text-sm flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-slate-300 shrink-0" />
+                    {screen}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        
+        <div className="mt-8 p-4 bg-slate-50 rounded-xl border border-slate-200 text-sm text-slate-600 italic leading-relaxed">
+          <strong>Note:</strong> This scope and pricing covers <strong>up to 18-20 pages/interfaces</strong>. Any additional pages beyond this scope will be charged on a per-page basis. Development effort includes component architecture, responsive behavior, Python/Node.js API integrations, robust loading states, and investor-demo visual polish beyond the visual screens themselves.
+        </div>
+      </motion.div>
+
+      {/* Explicitly Out of Scope */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -179,7 +221,7 @@ export function Deliverables() {
           <h3 className="text-xl font-bold text-slate-900">Intentionally Excluded from Prototype</h3>
         </div>
         <p className="text-sm text-slate-600 mb-6 max-w-3xl">
-          The following features will be built in the Phase 1 MVP post-funding, but are explicitly removed from this initial 6-week build to protect your budget and timeline.
+          The following features will be built in subsequent development phases, but are explicitly removed from this initial 6-week build to ensure focused delivery.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">

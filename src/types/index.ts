@@ -44,14 +44,18 @@ export interface OperationalCost {
 }
 
 
-
-
 export interface JourneyStep {
   id: string;
   phase: string;
   title: string;
   frontendExp: string;
   backendProc: string;
+}
+
+export interface PrototypeInterfaceSection {
+  category: string;
+  count: number;
+  screens: string[];
 }
 
 export interface ProposalConfig {
@@ -64,6 +68,7 @@ export interface ProposalConfig {
   objectives: Objective[];
   userJourney: JourneyStep[]
   paymentMilestones: PaymentMilestone[];
+  prototypeInterfaces?: PrototypeInterfaceSection[];
 operationalCosts: OperationalCost[];
   modules: ModuleConfig[];
   timeline: TimelineEvent[];

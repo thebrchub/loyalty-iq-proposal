@@ -6,7 +6,7 @@ export const proposalData: ProposalConfig = {
   purpose: "Investor Prototype Development",
   lastUpdated: new Date().toLocaleDateString('en-IN', { month: 'long', day: 'numeric', year: 'numeric' }),
   estimatedDuration: "6 Weeks",
-  totalCost: 515000, 
+  totalCost: 535000, 
   objectives: [
     { title: "Demonstrate Working Product", description: "Build a highly functional, interactive platform for stakeholders to experience directly." },
     { title: "Validate Product Concept", description: "Prove that reward aggregation solves a real user pain point through live data synchronization." },
@@ -51,56 +51,37 @@ export const proposalData: ProposalConfig = {
       backendProc: "The Python-based AI engine utilizes RAG (Retrieval-Augmented Generation). It pulls the user's specific balances from the DB, injects them into the LLM context, and streams the response."
     }
   ],
-  
-  modules: [
-    // {
-    //   id: "mod-1",
-    //   title: "Product Discovery & Technical Planning",
-    //   description: "Requirements gathering and foundational architecture mapping.",
-    //   cost: 35000,
-    //   complexity: "Medium",
-    //   technicalNotes: ["Database ERD design", "API Contract planning", "Workflow mapping"],
-    //   deliverables: [
-    //     { name: "Requirements gathering", included: true },
-    //     { name: "Architecture & Database design", included: true },
-    //     { name: "Technical documentation", included: true }
-    //   ],
-    //   whyThisCost: [
-    //     "Ensures absolute clarity on the technical path forward before any code is written.",
-    //     "Prevents technical debt by ensuring the Node/Python microservice bridge is architected for zero-latency communication."
-    //   ]
-    // },
+
+ modules: [
     {
       id: "mod-2",
-      title: "UI/UX Design (Optional)",
-      description: "Complete visual design system and user interface layouts.",
+      title: "UI/UX Design",
+      description: "Complete visual design system covering 18-20 unique user interface layouts.",
       cost: 50000,
       complexity: "Medium",
       technicalNotes: ["Design handoff", "Responsive layouts"],
       deliverables: [
-        { name: "Wireframes & Dashboard design", included: true },
-        { name: "Onboarding & AI assistant screens", included: true }
+        { name: "18-20 High-Fidelity Prototype Screens", included: true },
+        { name: "Wireframes, Dashboard & Onboarding", included: true }
       ],
       whyThisCost: [
-        "This module is optional. If your team provides the designs, this cost will be deducted.",
-        "We build a dynamic design system (Figma to Code), not just flat images, enabling rapid development."
+        "We build a dynamic design system (Figma to Code) across ~20 unique interfaces, not just flat images, enabling rapid development."
       ]
     },
     {
       id: "mod-3",
       title: "Frontend Application Development",
-      description: "The core React 19 web application and interactive user interfaces.",
+      description: "The core React 19 web application, developing all 18-20 interactive user interfaces.",
       cost: 175000,
       complexity: "High",
       technicalNotes: ["React 19", "Vite", "TypeScript", "Tailwind CSS v4"],
       deliverables: [
-        { name: "Authentication & Onboarding flows", included: true },
-        { name: "Reward Dashboard & Overview", included: true },
-        { name: "AI Assistant Interface & Settings", included: true },
+        { name: "Development of 18-20 Interactive Screens", included: true },
+        { name: "Reward Dashboard & AI Assistant UI", included: true },
         { name: "Responsive Design & API Integration Layer", included: true }
       ],
       whyThisCost: [
-        "Involves building complex, state-driven interfaces for the dashboard.",
+        "Involves building ~20 complex, state-driven interfaces covering onboarding, dashboards, and AI chat.",
         "Ensures a snappy, single-page application feel that matches top-tier SaaS products like Ola or Stripe."
       ]
     },
@@ -122,23 +103,6 @@ export const proposalData: ProposalConfig = {
         "Requires highly secure data handling and idempotent database transaction logic."
       ]
     },
-    // {
-    //   id: "mod-5",
-    //   title: "Gmail Integration & Python Extraction",
-    //   description: "The authentication and synchronization layer for user emails.",
-    //   cost: 75000,
-    //   complexity: "High",
-    //   technicalNotes: ["Google OAuth 2.0", "Python Gmail API Client"],
-    //   deliverables: [
-    //     { name: "Gmail Authentication flow", included: true },
-    //     { name: "Email Synchronization Service", included: true },
-    //     { name: "Python Reward Email Detection Pipeline", included: true }
-    //   ],
-    //   whyThisCost: [
-    //     "Requires navigating strict Google API quotas and security protocols.",
-    //     "Involves building robust Python parsing pipelines using Playwright/BeautifulSoup to detect and extract data."
-    //   ]
-    // },
     {
       id: "mod-6",
       title: "Loyalty Data Normalization System",
@@ -188,40 +152,32 @@ export const proposalData: ProposalConfig = {
       ]
     }
   ],
-  timeline: [
-    {
-      week: "Week 1",
-      title: "Discovery, Architecture & UI/UX",
-      description: "Requirements finalized, database schemas mapped, and interface designs completed. Dual Node/Python environment setup."
-    },
-    {
-      week: "Week 2-3",
-      title: "Core Platform Development",
-      description: "Frontend React application built concurrently with Node.js APIs and Python background worker skeletons."
-    },
-    {
-      week: "Week 4",
-      title: "Data Pipelines & Gmail Integration",
-      description: "OAuth integration, Gmail sync, and the Python-based secure PDF/statement parsing engines constructed."
-    },
-    {
-      week: "Week 5",
-      title: "AI Intelligence Engine",
-      description: "Integration of Python AI services for reward extraction, normalization, and contextual chat functionality."
-    },
-    {
-      week: "Week 6",
-      title: "QA, Security & Deployment",
-      description: "End-to-end system testing, bug resolution, secure Dockerized deployment, and final handover."
-    }
+
+  // NEW: Interface Breakdown Data
+  prototypeInterfaces: [
+    { category: "Welcome & Introduction", count: 2, screens: ["Welcome Screen", "Product Overview"] },
+    { category: "Gmail Connection Journey", count: 2, screens: ["Connect Google Account", "Permissions & Auth"] },
+    { category: "Loyalty Dashboard", count: 4, screens: ["Dashboard Overview", "Total Reward Wealth", "Rewards Breakdown", "Expiry Alerts"] },
+    { category: "Rewards Explorer", count: 4, screens: ["Credit Card Rewards", "Airline Miles", "Hotel Rewards", "Program Details"] },
+    { category: "AI Assistant Experience", count: 2, screens: ["AI Chat Interface", "AI Insights View"] },
+    { category: "Card Recommendation", count: 2, screens: ["Recommendation Screen", "Reward Opportunity View"] },
+    { category: "Completion Experience", count: 2, screens: ["Summary View", "Actionable Recommendations"] }
   ],
 
-  paymentMilestones: [
-    { phase: "Advance Payment", percentage: 25, amount: 150000, description: "Upon SOW signing, before development begins. Covers project setup and architecture kickoff." },
-    { phase: "Milestone 1", percentage: 25, amount: 150000, description: "Upon completion and client approval of all UI/UX screen designs and architecture sign-off." },
-    { phase: "Milestone 2", percentage: 25, amount: 150000, description: "Upon delivery of core web app with Gmail OAuth integration and Loyalty Dashboard functional." },
-    { phase: "Milestone 3", percentage: 15, amount: 90000, description: "Upon completion of Python extraction pipelines and AI Assistant integration." },
-    { phase: "Final Release", percentage: 10, amount: 60000, description: "Upon final QA sign-off, deployment to live URL, and client acceptance." }
+  timeline: [
+    { week: "Week 1", title: "Discovery, Architecture & UI/UX", description: "Requirements finalized, database schemas mapped, and interface designs completed. Dual Node/Python environment setup." },
+    { week: "Week 2-3", title: "Core Platform Development", description: "Frontend React application built concurrently with Node.js APIs and Python background worker skeletons." },
+    { week: "Week 4", title: "Data Pipelines & Gmail Integration", description: "OAuth integration, Gmail sync, and the Python-based secure PDF/statement parsing engines constructed." },
+    { week: "Week 5", title: "AI Intelligence Engine", description: "Integration of Python AI services for reward extraction, normalization, and contextual chat functionality." },
+    { week: "Week 6", title: "QA, Security & Deployment", description: "End-to-end system testing, bug resolution, secure Dockerized deployment, and final handover." }
+  ],
+
+ paymentMilestones: [
+    { phase: "Advance Payment", percentage: 25, amount: 133750, description: "Upon SOW signing, before development begins. Covers project setup and architecture kickoff." },
+    { phase: "Milestone 1", percentage: 25, amount: 133750, description: "Upon completion and client approval of all UI/UX screen designs and architecture sign-off." },
+    { phase: "Milestone 2", percentage: 25, amount: 133750, description: "Upon delivery of core web app with Gmail OAuth integration and Loyalty Dashboard functional." },
+    { phase: "Milestone 3", percentage: 15, amount: 80250, description: "Upon completion of Python extraction pipelines and AI Assistant integration." },
+    { phase: "Final Release", percentage: 10, amount: 53500, description: "Upon final QA sign-off, deployment to live URL, and client acceptance." }
   ],
 
   operationalCosts: [
@@ -229,7 +185,8 @@ export const proposalData: ProposalConfig = {
     { title: "Server Infrastructure", cost: "Billed to Client", description: "AWS/VPS compute costs for running the Node.js APIs, PostgreSQL, and Python workers will be borne directly by the client via their own cloud account." },
     { title: "AI API Token Usage", cost: "Billed to Client", description: "All OpenAI/Gemini API calls required for the AI Assistant and PDF data extraction will run through the client's own API keys and billing account." }
   ],
-faqs: [
+
+  faqs: [
     {
       question: "Why use both Node.js and Python?",
       answer: "Node.js is superior for handling real-time user traffic and API requests with zero latency. Python is the industry leader for AI, data scraping, and PDF parsing. Combining them creates a high-performance, enterprise-grade architecture."
@@ -248,7 +205,7 @@ faqs: [
     },
     {
       question: "What are the next steps after the prototype is delivered?",
-      answer: "BRC HUB LLP can transition into a dedicated engineering retainer to scale the infrastructure, build native mobile iOS and Android apps, and integrate additional bank and airline networks."
+      answer: "BRC Studios LLP can transition into a dedicated engineering retainer to scale the infrastructure, build native mobile iOS and Android apps, and integrate additional bank and airline networks."
     }
   ]
 };
