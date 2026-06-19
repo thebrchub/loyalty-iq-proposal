@@ -43,9 +43,8 @@ export interface OperationalCost {
   description: string;
 }
 
-// Add these inside your existing ProposalConfig interface:
-// paymentMilestones: PaymentMilestone[];
-// operationalCosts: OperationalCost[];
+
+
 
 export interface JourneyStep {
   id: string;

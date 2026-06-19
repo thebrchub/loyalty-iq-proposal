@@ -54,7 +54,7 @@ export function CostBreakdown() {
             key={module.id} 
             className="border border-slate-200 rounded-xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow"
           >
-            {/* Header / Clickable Area */}
+            {}
             <button 
               onClick={() => toggleModule(module.id)}
               className="w-full text-left px-6 py-5 flex flex-col md:flex-row md:items-center justify-between bg-white hover:bg-slate-50 transition-colors gap-4"
@@ -82,7 +82,7 @@ export function CostBreakdown() {
               </div>
             </button>
 
-            {/* Expandable Technical & Financial Content */}
+            {}
             <AnimatePresence>
               {openModule === module.id && (
                 <motion.div
@@ -94,7 +94,7 @@ export function CostBreakdown() {
                 >
                   <div className="p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
                     
-                    {/* Left Column: Pure Technical Scope */}
+                    {}
                     <div>
                       <h4 className="flex items-center gap-2 text-sm font-bold text-slate-900 uppercase tracking-wider mb-4">
                         <CheckCircle2 className="w-4 h-4 text-emerald-600" />
@@ -122,7 +122,7 @@ export function CostBreakdown() {
                       </div>
                     </div>
 
-                    {/* Right Column: Financial & Contextual Justification */}
+                    {}
                     <div className="bg-white p-6 rounded-xl border border-indigo-100 shadow-sm relative overflow-hidden">
                       <div className="absolute top-0 left-0 w-1 h-full bg-indigo-500"></div>
                       

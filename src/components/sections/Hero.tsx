@@ -30,23 +30,23 @@ const handleDownloadProposal = async () => {
 export function Hero() {
   return (
     <section className="relative pt-12 pb-16 overflow-hidden border-b border-slate-200 bg-white">
-      {/* Subtle animated gradient background */}
+      {}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-50 via-white to-white opacity-70"></div>
       
-      {/* UPDATE THIS LINE BELOW: Changed max-w-5xl to max-w-7xl and added md:px-12 */}
+      {}
     <div className="relative max-w-[1440px] mx-auto px-6 md:px-12 z-10">
         
         
-        {/* NEW: Official Branding Header */}
+        {}
         <motion.div 
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full mb-16 pb-6 border-b border-slate-100 gap-6"
         >
-          {/* Prepared By Section */}
+          {}
           <div className="flex items-center gap-4">
-            {/* Ensure your logo.png is placed in the public/ folder */}
+            {}
             <img src="/logo.png" alt="BRC HUB LLP Logo" className="h-10 w-auto object-contain" />
             <div className="hidden sm:block border-l border-slate-200 pl-4">
               <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Prepared By</div>
@@ -54,14 +54,14 @@ export function Hero() {
             </div>
           </div>
           
-          {/* Prepared For Section */}
+          {}
           <div className="sm:text-right">
             <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Prepared For</div>
             <div className="text-sm font-bold text-slate-900">Mr. {proposalData.clientName}</div>
           </div>
         </motion.div>
 
-        {/* Main Hero Content */}
+        {}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -81,14 +81,14 @@ export function Hero() {
           </div>
         </motion.div>
 
-        {/* Stats Grid */}
+        {}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6"
         >
-          {/* Investment Card */}
+          {}
           <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 text-slate-500 mb-2">
               <IndianRupee className="w-5 h-5 text-emerald-600" />
@@ -99,7 +99,7 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Duration Card */}
+          {}
           <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 text-slate-500 mb-2">
               <Clock className="w-5 h-5 text-indigo-600" />
@@ -110,7 +110,7 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Action Card */}
+          {}
           <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex flex-col justify-center">
             <button
   onClick={handleDownloadProposal}

@@ -12,7 +12,7 @@ export function ExecutiveSummary() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
         
-        {/* Left Column: Clean, Light Premium Card */}
+        {}
         <div className="lg:col-span-5">
           <div className="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-xl relative h-full flex flex-col">
             
@@ -40,7 +40,7 @@ export function ExecutiveSummary() {
                 </div>
               </div>
 
-              {/* System Capabilities */}
+              {}
               <div className="mt-12 pt-10 border-t border-slate-100">
                 <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">System Capabilities</h4>
                 <ul className="space-y-6">
@@ -78,10 +78,10 @@ export function ExecutiveSummary() {
           </div>
         </div>
 
-        {/* Right Column: Objectives & Technical Strategy */}
+        {}
         <div className="lg:col-span-7 flex flex-col justify-between space-y-10">
           
-          {/* Strategic Objectives Grid */}
+          {}
           <div>
             <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
               <Target className="w-7 h-7 text-emerald-600" />
@@ -108,7 +108,7 @@ export function ExecutiveSummary() {
             </div>
           </div>
 
-          {/* Core Engineering Strategy Section */}
+          {}
           <div className="bg-slate-50 rounded-3xl p-8 border border-slate-200 shadow-sm">
             <h3 className="text-xl font-bold text-slate-900 mb-6">Core Engineering Strategy</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

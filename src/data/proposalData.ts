@@ -216,7 +216,6 @@ export const proposalData: ProposalConfig = {
     }
   ],
 
-  // NEW: 5-Step Payment Milestones calculated for the ₹6L total
   paymentMilestones: [
     { phase: "Advance Payment", percentage: 25, amount: 150000, description: "Upon SOW signing, before development begins. Covers project setup and architecture kickoff." },
     { phase: "Milestone 1", percentage: 25, amount: 150000, description: "Upon completion and client approval of all UI/UX screen designs and architecture sign-off." },
@@ -225,7 +224,6 @@ export const proposalData: ProposalConfig = {
     { phase: "Final Release", percentage: 10, amount: 60000, description: "Upon final QA sign-off, deployment to live URL, and client acceptance." }
   ],
 
-  // NEW: Operational Costs clearly defining his responsibilities
   operationalCosts: [
     { title: "Monthly Maintenance & Monitoring", cost: "₹21,000 / month", description: "Required during the active prototype period to cover BRC HUB's ongoing engineering oversight, server monitoring, and data pipeline upkeep." },
     { title: "Server Infrastructure", cost: "Billed to Client", description: "AWS/VPS compute costs for running the Node.js APIs, PostgreSQL, and Python workers will be borne directly by the client via their own cloud account." },

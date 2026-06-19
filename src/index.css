@@ -1,37 +1,37 @@
-/* 1. Import Tailwind v4 */
+
 @import "tailwindcss";
 
-/* 2. Override default theme variables */
+
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-/* 3. Base styles and Custom Scrollbar */
+
 @layer base {
-  /* Global scrollbar styling for webkit browsers (Chrome, Safari, Edge) */
+  
   ::-webkit-scrollbar {
-    width: 8px; /* Vertical scrollbar width */
-    height: 8px; /* Horizontal scrollbar height */
+    width: 8px; 
+    height: 8px; 
   }
 
-  /* The track (background) of the scrollbar */
+  
   ::-webkit-scrollbar-track {
-    background: #f8fafc; /* tailwind slate-50 */
+    background: #f8fafc; 
   }
 
-  /* The draggable thumb */
+  
   ::-webkit-scrollbar-thumb {
-    background-color: #cbd5e1; /* tailwind slate-300 */
-    border-radius: 9999px; /* Fully rounded edges */
-    border: 2px solid #f8fafc; /* Creates padding around the thumb */
+    background-color: #cbd5e1; 
+    border-radius: 9999px; 
+    border: 2px solid #f8fafc; 
   }
 
-  /* Hover state for the thumb */
+  
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #94a3b8; /* tailwind slate-400 */
+    background-color: #94a3b8; 
   }
 
-  /* Firefox scrollbar fallback */
+  
   * {
     scrollbar-width: thin;
     scrollbar-color: #cbd5e1 #f8fafc;

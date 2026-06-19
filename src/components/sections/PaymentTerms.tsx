@@ -6,7 +6,7 @@ export function PaymentTerms() {
   return (
     <section className="space-y-16" id="payment-terms">
       
-      {/* 1. Project Milestones (Reimagined with Progress Rings) */}
+      {}
       <div>
         <div className="border-b border-slate-200 pb-6 mb-10">
           <h2 className="text-3xl font-bold text-slate-900 tracking-tight">Payment Milestones</h2>
@@ -28,10 +28,10 @@ export function PaymentTerms() {
                   {milestone.phase}
                 </div>
                 
-                {/* Custom SVG Circular Progress Ring */}
+                {}
                 <div className="relative w-12 h-12 flex items-center justify-center shrink-0">
                   <svg className="w-full h-full -rotate-90 drop-shadow-sm" viewBox="0 0 36 36">
-                    {/* Background Ring */}
+                    {}
                     <path 
                       className="text-slate-100" 
                       strokeWidth="3.5" 
@@ -39,7 +39,7 @@ export function PaymentTerms() {
                       fill="none" 
                       d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" 
                     />
-                    {/* Value Ring */}
+                    {}
                     <path 
                       className="text-indigo-500 transition-all duration-1000 ease-out" 
                       strokeDasharray={`${milestone.percentage}, 100`} 
@@ -70,9 +70,9 @@ export function PaymentTerms() {
         </div>
       </div>
 
-      {/* 2. Operational & Post-Launch Costs (Reimagined Light Theme Ledger) */}
+      {}
       <div className="bg-gradient-to-br from-slate-50 to-slate-100/50 rounded-[2.5rem] p-8 md:p-12 border border-slate-200 shadow-inner relative overflow-hidden">
-        {/* Subtle background graphic */}
+        {}
         <div className="absolute -top-24 -right-24 opacity-[0.03] pointer-events-none rotate-12">
           <CreditCard className="w-96 h-96 text-slate-900" />
         </div>
@@ -89,7 +89,7 @@ export function PaymentTerms() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
-            {/* Maintenance Card */}
+            {}
             <div className="bg-white border border-emerald-100 shadow-sm hover:shadow-md transition-shadow p-8 rounded-3xl group">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3.5 bg-emerald-50 rounded-2xl group-hover:scale-110 transition-transform">
@@ -105,7 +105,7 @@ export function PaymentTerms() {
               </p>
             </div>
 
-            {/* Cloud Card */}
+            {}
             <div className="bg-white border border-amber-100 shadow-sm hover:shadow-md transition-shadow p-8 rounded-3xl group">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3.5 bg-amber-50 rounded-2xl group-hover:scale-110 transition-transform">
@@ -121,7 +121,7 @@ export function PaymentTerms() {
               </p>
             </div>
 
-            {/* AI Token Card */}
+            {}
             <div className="bg-white border border-rose-100 shadow-sm hover:shadow-md transition-shadow p-8 rounded-3xl group">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3.5 bg-rose-50 rounded-2xl group-hover:scale-110 transition-transform">

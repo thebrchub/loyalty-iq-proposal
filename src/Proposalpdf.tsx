@@ -1,7 +1,7 @@
-// ProposalPDF.tsx
-// Requires: npm install @react-pdf/renderer
-// Usage: import { DownloadProposalButton } from './ProposalPDF'
-// Place your logo at public/logo.png
+
+
+
+
 
 import {
   Document,
@@ -13,13 +13,11 @@ import {
   Image,
 } from "@react-pdf/renderer";
 
-// ─── Typography ──────────────────────────────────────────────────────────────
-// Using built-in Helvetica family for maximum PDF compatibility.
-// To use custom fonts, register them with Font.register() before use.
 
-// ─── Design tokens ───────────────────────────────────────────────────────────
+
+
 const T = {
-  // Palette
+
   ink: "#0D0D0D",
   inkMid: "#3A3A3A",
   inkLight: "#6B6B6B",
@@ -34,7 +32,6 @@ const T = {
   colGap: 20,
 } as const;
 
-// ─── Shared StyleSheet ────────────────────────────────────────────────────────
 const S = StyleSheet.create({
   page: {
     fontFamily: "Helvetica",
@@ -45,7 +42,6 @@ const S = StyleSheet.create({
     color: T.ink,
   },
 
-  // Header / footer
   pageHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -97,7 +93,6 @@ const S = StyleSheet.create({
     color: T.inkFaint,
   },
 
-  // Section headings
   sectionLabel: {
     fontSize: 7.5,
     fontFamily: "Helvetica-Bold",
@@ -119,7 +114,6 @@ const S = StyleSheet.create({
     marginBottom: 18,
   },
 
-  // Body text
   body: {
     fontSize: 9,
     lineHeight: 1.7,
@@ -135,7 +129,6 @@ const S = StyleSheet.create({
     color: T.ink,
   },
 
-  // Layout utilities
   row: {
     flexDirection: "row",
   },
@@ -147,7 +140,6 @@ const S = StyleSheet.create({
   spacer16: { marginBottom: 16 },
   spacer24: { marginBottom: 24 },
 
-  // Pill / badge
   pill: {
     paddingHorizontal: 8,
     paddingVertical: 3,
@@ -162,7 +154,6 @@ const S = StyleSheet.create({
     letterSpacing: 0.5,
   },
 
-  // KV pairs
   kv: {
     flexDirection: "row",
     gap: 8,
@@ -180,7 +171,6 @@ const S = StyleSheet.create({
     flex: 1,
   },
 
-  // Card box
   card: {
     borderWidth: 0.5,
     borderColor: T.rule,
@@ -195,7 +185,6 @@ const S = StyleSheet.create({
     marginBottom: 6,
   },
 
-  // Table
   tableHeader: {
     flexDirection: "row",
     backgroundColor: T.accent,
@@ -230,7 +219,6 @@ const S = StyleSheet.create({
     color: T.ink,
   },
 
-  // Timeline
   timelineRow: {
     flexDirection: "row",
     marginBottom: 10,
@@ -259,7 +247,6 @@ const S = StyleSheet.create({
     lineHeight: 1.5,
   },
 
-  // Arch diagram
   archBox: {
     alignItems: "center",
     marginVertical: 4,
@@ -287,7 +274,6 @@ const S = StyleSheet.create({
   },
 });
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
 
 const todayStr = new Date().toLocaleDateString("en-IN", {
   day: "2-digit",
@@ -339,12 +325,11 @@ function SectionHeading({
   );
 }
 
-// ─── PAGE 1 — Cover ───────────────────────────────────────────────────────────
 
 function CoverPage() {
   return (
     <Page size="A4" style={{ ...S.page, paddingTop: 0, paddingHorizontal: 0 }}>
-      {/* Left navy stripe */}
+      {}
       <View
         style={{
           position: "absolute",
@@ -356,9 +341,9 @@ function CoverPage() {
         }}
       />
 
-      {/* Content */}
+      {}
       <View style={{ paddingHorizontal: T.pageGutter, paddingTop: 64, flex: 1 }}>
-        {/* Logo + brand */}
+        {}
         <View style={{ flexDirection: "row", alignItems: "center", gap: 10, marginBottom: 64 }}>
           <Image src="/logo.png" style={{ width: 32, height: 32 }} />
           <View>
@@ -371,7 +356,7 @@ function CoverPage() {
           </View>
         </View>
 
-        {/* Title block */}
+        {}
         <View style={{ marginBottom: 48 }}>
           <View style={{ ...S.pill, marginBottom: 14 }}>
             <Text style={S.pillText}>Technical Proposal & Commercial Scope</Text>
@@ -392,10 +377,10 @@ function CoverPage() {
           </Text>
         </View>
 
-        {/* Divider */}
+        {}
         <View style={{ borderTopWidth: 0.5, borderTopColor: T.rule, marginBottom: 32 }} />
 
-        {/* Meta grid */}
+        {}
         <View style={{ flexDirection: "row", gap: 40, marginBottom: 64 }}>
           <View>
             <Text style={{ fontSize: 7, color: T.inkFaint, letterSpacing: 0.6, marginBottom: 4 }}>
@@ -431,7 +416,7 @@ function CoverPage() {
           </View>
         </View>
 
-        {/* Investment summary strip */}
+        {}
         <View
           style={{
             backgroundColor: T.accent,
@@ -468,7 +453,7 @@ function CoverPage() {
         </View>
       </View>
 
-      {/* Bottom rule */}
+      {}
       <View style={{ paddingHorizontal: T.pageGutter, paddingBottom: 24, marginTop: "auto" }}>
         <View style={{ borderTopWidth: 0.5, borderTopColor: T.rule, paddingTop: 12 }}>
           <Text style={{ fontSize: 7, color: T.inkFaint }}>
@@ -480,7 +465,6 @@ function CoverPage() {
   );
 }
 
-// ─── PAGE 2 — Executive Summary ───────────────────────────────────────────────
 
 function ExecutiveSummaryPage() {
   return (
@@ -497,7 +481,7 @@ function ExecutiveSummaryPage() {
 
       <View style={S.spacer16} />
 
-      {/* Three pillars */}
+      {}
       <View style={{ flexDirection: "row", gap: 10, marginBottom: 20 }}>
         {[
           {
@@ -520,7 +504,7 @@ function ExecutiveSummaryPage() {
         ))}
       </View>
 
-      {/* Key metrics row */}
+      {}
       <View style={{ backgroundColor: T.accentLight, borderRadius: 4, padding: 16, flexDirection: "row", gap: 0 }}>
         {[
           ["₹6,00,000", "Total Investment"],
@@ -560,7 +544,6 @@ function ExecutiveSummaryPage() {
   );
 }
 
-// ─── PAGE 3 — System Architecture ────────────────────────────────────────────
 
 function ArchitecturePage() {
   const ArchFlow = ({
@@ -625,7 +608,7 @@ function ArchitecturePage() {
 
       <View style={S.spacer16} />
 
-      {/* Infra note */}
+      {}
       <View style={{ backgroundColor: "#F8FAFB", borderRadius: 4, padding: 14, borderLeftWidth: 3, borderLeftColor: T.accent }}>
         <Text style={{ ...S.bodySmall, fontFamily: "Helvetica-Bold", color: T.accent, marginBottom: 4 }}>
           Infrastructure Note
@@ -640,7 +623,6 @@ function ArchitecturePage() {
   );
 }
 
-// ─── PAGE 4 — Technology Stack ────────────────────────────────────────────────
 
 function TechStackPage() {
   const StackGroup = ({
@@ -719,7 +701,6 @@ function TechStackPage() {
   );
 }
 
-// ─── PAGE 5 — Scope of Work ───────────────────────────────────────────────────
 
 const modules = [
   {
@@ -834,7 +815,6 @@ function ScopeOfWorkPage() {
   );
 }
 
-// ─── PAGE 6 — Commercial Breakdown ───────────────────────────────────────────
 
 const pricing = [
   { module: "Product Discovery", description: "Requirements, architecture, planning", cost: "₹35,000" },
@@ -857,7 +837,7 @@ function CommercialPage() {
         The following table details the cost allocation across all eight modules. Each line item is independently deliverable and trackable against the project milestone schedule.
       </Text>
 
-      {/* Table header */}
+      {}
       <View style={S.tableHeader}>
         <Text style={{ ...S.tableHeaderText, flex: 2 }}>Module</Text>
         <Text style={{ ...S.tableHeaderText, flex: 3 }}>Description</Text>
@@ -872,7 +852,7 @@ function CommercialPage() {
         </View>
       ))}
 
-      {/* Total row */}
+      {}
       <View
         style={{
           flexDirection: "row",
@@ -914,7 +894,6 @@ function CommercialPage() {
   );
 }
 
-// ─── PAGE 7 — Cost Justification ─────────────────────────────────────────────
 
 function CostJustificationPage() {
   const JustBlock = ({
@@ -1001,7 +980,6 @@ function CostJustificationPage() {
   );
 }
 
-// ─── PAGE 8 — Timeline ────────────────────────────────────────────────────────
 
 function TimelinePage() {
   const timeline = [
@@ -1031,7 +1009,7 @@ function TimelinePage() {
         The 8-week delivery plan is structured to front-load discovery and design decisions, minimising costly rework during development. Integration and AI work begins in Week 7 once the application shell is stable.
       </Text>
 
-      {/* Timeline */}
+      {}
       {timeline.map((item) => (
         <View key={item.week} style={S.timelineRow}>
           <View style={S.timelineDot} />
@@ -1047,7 +1025,7 @@ function TimelinePage() {
 
       <View style={S.spacer16} />
 
-      {/* Deliverables */}
+      {}
       <View style={{ backgroundColor: "#F8FAFB", borderRadius: 4, padding: 14 }}>
         <Text style={{ ...S.cardTitle, marginBottom: 10 }}>Final Deliverables</Text>
         <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 8 }}>
@@ -1065,7 +1043,6 @@ function TimelinePage() {
   );
 }
 
-// ─── PAGE 9 — Commercial Terms ────────────────────────────────────────────────
 
 function CommercialTermsPage() {
   return (
@@ -1135,7 +1112,7 @@ function CommercialTermsPage() {
         ))}
       </View>
 
-      {/* Signature block */}
+      {}
       <View style={{ borderWidth: 0.5, borderColor: T.rule, borderRadius: 4, padding: 20, marginTop: 8 }}>
         <Text style={{ ...S.cardTitle, marginBottom: 16 }}>Acceptance & Sign-Off</Text>
         <View style={{ flexDirection: "row", gap: 40 }}>
@@ -1156,7 +1133,7 @@ function CommercialTermsPage() {
         </View>
       </View>
 
-      {/* Closing */}
+      {}
       <View style={{ marginTop: 24, alignItems: "center" }}>
         <Text style={{ fontSize: 8, color: T.inkFaint, textAlign: "center" }}>
           BRC HUB LLP — Technology & Product Studio — Bengaluru, India
@@ -1171,7 +1148,6 @@ function CommercialTermsPage() {
   );
 }
 
-// ─── Master Document ──────────────────────────────────────────────────────────
 
 function LoyaltyIQProposal() {
   return (
@@ -1194,9 +1170,8 @@ function LoyaltyIQProposal() {
   );
 }
 
-// ─── Download Button ──────────────────────────────────────────────────────────
-// Drop this anywhere in your app:
-// <DownloadProposalButton />
+
+
 
 export function DownloadProposalButton() {
   return (

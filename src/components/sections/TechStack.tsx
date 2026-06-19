@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Layers, Server, Globe2, Shield, Bot, Mail, FileJson, type LucideIcon } from 'lucide-react';
 
-// 1. Define strict TypeScript interfaces so it knows some fields are optional
 interface TechItem {
   name: string;
   reason: string;
@@ -16,7 +15,6 @@ interface TechCategory {
   tech: TechItem[];
 }
 
-// 2. Apply the TechCategory[] type to our array
 const techCategories: TechCategory[] = [
   {
     title: "Frontend Application",
@@ -138,7 +136,7 @@ export function TechStack() {
               
               <div className="flex flex-col gap-6 flex-grow">
                 {category.tech.map((item, i) => {
-                  // If it's a component from Lucide, assign it to a capitalized variable to render it
+
                   const ItemIcon = item.icon;
                   return (
                     <div key={i} className="flex items-start gap-4">

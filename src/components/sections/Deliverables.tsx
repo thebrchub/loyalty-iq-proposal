@@ -10,7 +10,6 @@ import {
   Info
 } from 'lucide-react';
 
-// Updated data structure to support optional tooltips on specific items
 type DeliverableItem = string | { text: string; tooltip: string };
 
 const inScopeItems: { title: string; icon: any; color: string; bgColor: string; borderColor: string; items: DeliverableItem[] }[] = [
@@ -92,7 +91,7 @@ export function Deliverables() {
         </div>
       </div>
 
-      {/* Strategic Callouts */}
+      {}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-indigo-50/50 border border-indigo-100 rounded-2xl p-6 flex gap-4">
           <div className="shrink-0 mt-1">
@@ -119,7 +118,7 @@ export function Deliverables() {
         </div>
       </div>
 
-      {/* In-Scope Grid */}
+      {}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {inScopeItems.map((group, index) => {
           const Icon = group.icon;
@@ -152,7 +151,7 @@ export function Deliverables() {
                         </span>
                         <Info className="w-4 h-4 text-slate-400 group-hover:text-indigo-500 transition-colors" />
                         
-                        {/* Tooltip Hover Box */}
+                        {}
                         <div className="absolute bottom-full left-0 md:left-1/2 md:-translate-x-1/2 mb-3 w-64 p-3 bg-slate-900 text-white text-xs leading-relaxed rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 shadow-xl pointer-events-none">
                           {item.tooltip}
                           <div className="absolute -bottom-1 left-6 md:left-1/2 md:-translate-x-1/2 w-3 h-3 bg-slate-900 rotate-45" />
@@ -168,7 +167,7 @@ export function Deliverables() {
         })}
       </div>
 
-      {/* Explicitly Out of Scope */}
+      {}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

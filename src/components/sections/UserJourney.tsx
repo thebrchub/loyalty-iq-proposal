@@ -7,7 +7,6 @@ import {
   BarChart3, CreditCard, Plane, Minimize2, Maximize2
 } from 'lucide-react';
 
-// The 8-Step Journey (Updated with Python microservices)
 const journeySteps = [
   {
     id: "step-1",
@@ -71,7 +70,6 @@ export function UserJourney() {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
-  // Smart Persistence: Load saved preference on mount
   useEffect(() => {
     setIsMounted(true);
     const savedState = localStorage.getItem('brc_journey_collapsed');
@@ -88,12 +86,11 @@ export function UserJourney() {
     });
   };
 
-  // Prevent hydration mismatches by not rendering the conditional parts until mounted
   if (!isMounted) return null;
 
   return (
     <section className="space-y-8" id="user-journey">
-      {/* Header Area with dynamic Toggle Button */}
+      {}
       <div className="border-b border-slate-200 pb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <h2 className="text-4xl font-extrabold text-slate-900 tracking-tight">System Journey Map</h2>
@@ -132,7 +129,7 @@ export function UserJourney() {
           >
             <div className="bg-slate-50 rounded-3xl shadow-inner border border-slate-200 relative pt-16 pb-24">
               
-              {/* Vertical Timeline Container */}
+              {}
               <div className="relative px-6 md:px-12 max-w-6xl mx-auto">
                 <div className="absolute top-[28px] bottom-[28px] left-[52px] md:left-1/2 w-1 bg-slate-200 md:-translate-x-1/2 rounded-full" />
                 
@@ -149,14 +146,14 @@ export function UserJourney() {
                         transition={{ duration: 0.75, ease: "easeOut" }}
                         className="relative flex flex-col md:flex-row items-start md:items-center justify-between w-full group"
                       >
-                        {/* The Central Node */}
+                        {}
                         <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 flex items-center justify-center z-10 top-0 md:top-auto">
                           <div className="w-14 h-14 rounded-full bg-indigo-600 text-white flex items-center justify-center border-4 border-slate-50 shadow-lg shadow-indigo-500/30">
                             <StepIcon className="w-6 h-6" />
                           </div>
                         </div>
 
-                        {/* Left Card: Frontend */}
+                        {}
                         <div className="w-full md:w-[45%] pl-20 md:pl-0 pt-2 md:pt-0 mb-6 md:mb-0">
                           <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative">
                             <div className="hidden md:block absolute top-1/2 right-0 w-8 h-0.5 bg-slate-200 translate-x-full" />
@@ -174,7 +171,7 @@ export function UserJourney() {
                           </div>
                         </div>
 
-                        {/* Right Card: Backend */}
+                        {}
                         <div className="w-full md:w-[45%] pl-20 md:pl-0">
                           <div className="bg-slate-900 rounded-2xl p-6 border border-slate-800 shadow-lg relative flex flex-col h-full">
                             <div className="hidden md:block absolute top-1/2 left-0 w-8 h-0.5 bg-slate-200 -translate-x-full" />
@@ -195,7 +192,7 @@ export function UserJourney() {
                     );
                   })}
 
-                  {/* FINAL SUCCESS STATE */}
+                  {}
                   <motion.div
                     initial={{ opacity: 0, scale: 0.95, y: 40 }}
                     whileInView={{ opacity: 1, scale: 1, y: 0 }}
