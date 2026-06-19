@@ -86,7 +86,7 @@ export function Deliverables() {
         <div className="max-w-3xl">
           <h2 className="text-4xl font-extrabold text-slate-900 tracking-tight">Scope & Deliverables</h2>
           <p className="text-slate-600 mt-3 text-lg leading-relaxed">
-            A clear breakdown of exactly what is included in the ₹6,00,000 Investor Prototype. We have strategically scoped this to maximize boardroom impact while aggressively reducing your initial cost.
+            A clear breakdown of exactly what is included in the ₹5,50,000 Investor Prototype. We have strategically scoped this to maximize boardroom impact while aggressively reducing your initial cost.
           </p>
         </div>
       </div>

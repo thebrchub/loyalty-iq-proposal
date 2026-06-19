@@ -39,7 +39,7 @@ export function CostBreakdown() {
           <div className="text-4xl font-extrabold text-emerald-600">₹{proposalData.totalCost.toLocaleString('en-IN')}</div>
           <div className="mt-2 inline-flex items-center gap-2 bg-indigo-50 border border-indigo-100 text-indigo-700 px-3 py-1.5 rounded-md text-sm font-medium">
             <PenTool className="w-4 h-4" />
-            <span>₹5,70,000 if client provides UI/UX designs</span>
+            <span>₹4,85,000 if client provides UI/UX designs</span>
           </div>
         </div>
       </div>

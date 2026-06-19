@@ -431,7 +431,7 @@ function CoverPage() {
               TOTAL INVESTMENT
             </Text>
             <Text style={{ fontSize: 22, fontFamily: "Helvetica-Bold", color: T.white }}>
-              ₹6,00,000
+              ₹5,50,000
             </Text>
           </View>
           <View>
@@ -507,7 +507,7 @@ function ExecutiveSummaryPage() {
       {}
       <View style={{ backgroundColor: T.accentLight, borderRadius: 4, padding: 16, flexDirection: "row", gap: 0 }}>
         {[
-          ["₹6,00,000", "Total Investment"],
+          ["₹5,50,000", "Total Investment"],
           ["8–10 Weeks", "Delivery Timeline"],
           ["8 Modules", "Scope of Work"],
           ["30 Days", "Post-delivery Support"],
@@ -865,7 +865,7 @@ function CommercialPage() {
       >
         <Text style={{ ...S.tableHeaderText, flex: 2 }}>Total Investment</Text>
         <Text style={{ ...S.tableHeaderText, flex: 3 }}></Text>
-        <Text style={{ ...S.tableHeaderText, flex: 1, textAlign: "right", fontSize: 11 }}>₹6,00,000</Text>
+        <Text style={{ ...S.tableHeaderText, flex: 1, textAlign: "right", fontSize: 11 }}>₹5,50,000</Text>
       </View>
 
       <View style={S.spacer16} />

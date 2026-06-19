@@ -6,7 +6,7 @@ export const proposalData: ProposalConfig = {
   purpose: "Investor Prototype Development",
   lastUpdated: new Date().toLocaleDateString('en-IN', { month: 'long', day: 'numeric', year: 'numeric' }),
   estimatedDuration: "6 Weeks",
-  totalCost: 600000, 
+  totalCost: 515000, 
   objectives: [
     { title: "Demonstrate Working Product", description: "Build a highly functional, interactive platform for stakeholders to experience directly." },
     { title: "Validate Product Concept", description: "Prove that reward aggregation solves a real user pain point through live data synchronization." },
@@ -53,28 +53,28 @@ export const proposalData: ProposalConfig = {
   ],
   
   modules: [
-    {
-      id: "mod-1",
-      title: "Product Discovery & Technical Planning",
-      description: "Requirements gathering and foundational architecture mapping.",
-      cost: 35000,
-      complexity: "Medium",
-      technicalNotes: ["Database ERD design", "API Contract planning", "Workflow mapping"],
-      deliverables: [
-        { name: "Requirements gathering", included: true },
-        { name: "Architecture & Database design", included: true },
-        { name: "Technical documentation", included: true }
-      ],
-      whyThisCost: [
-        "Ensures absolute clarity on the technical path forward before any code is written.",
-        "Prevents technical debt by ensuring the Node/Python microservice bridge is architected for zero-latency communication."
-      ]
-    },
+    // {
+    //   id: "mod-1",
+    //   title: "Product Discovery & Technical Planning",
+    //   description: "Requirements gathering and foundational architecture mapping.",
+    //   cost: 35000,
+    //   complexity: "Medium",
+    //   technicalNotes: ["Database ERD design", "API Contract planning", "Workflow mapping"],
+    //   deliverables: [
+    //     { name: "Requirements gathering", included: true },
+    //     { name: "Architecture & Database design", included: true },
+    //     { name: "Technical documentation", included: true }
+    //   ],
+    //   whyThisCost: [
+    //     "Ensures absolute clarity on the technical path forward before any code is written.",
+    //     "Prevents technical debt by ensuring the Node/Python microservice bridge is architected for zero-latency communication."
+    //   ]
+    // },
     {
       id: "mod-2",
       title: "UI/UX Design (Optional)",
       description: "Complete visual design system and user interface layouts.",
-      cost: 30000,
+      cost: 50000,
       complexity: "Medium",
       technicalNotes: ["Design handoff", "Responsive layouts"],
       deliverables: [
@@ -90,7 +90,7 @@ export const proposalData: ProposalConfig = {
       id: "mod-3",
       title: "Frontend Application Development",
       description: "The core React 19 web application and interactive user interfaces.",
-      cost: 150000,
+      cost: 175000,
       complexity: "High",
       technicalNotes: ["React 19", "Vite", "TypeScript", "Tailwind CSS v4"],
       deliverables: [
@@ -108,7 +108,7 @@ export const proposalData: ProposalConfig = {
       id: "mod-4",
       title: "Backend Platform Development",
       description: "Secure, scalable backend infrastructure and business logic.",
-      cost: 175000,
+      cost: 200000,
       complexity: "High",
       technicalNotes: ["Node.js Gateway", "Python Worker Services", "PostgreSQL"],
       deliverables: [
@@ -122,23 +122,23 @@ export const proposalData: ProposalConfig = {
         "Requires highly secure data handling and idempotent database transaction logic."
       ]
     },
-    {
-      id: "mod-5",
-      title: "Gmail Integration & Python Extraction",
-      description: "The authentication and synchronization layer for user emails.",
-      cost: 75000,
-      complexity: "High",
-      technicalNotes: ["Google OAuth 2.0", "Python Gmail API Client"],
-      deliverables: [
-        { name: "Gmail Authentication flow", included: true },
-        { name: "Email Synchronization Service", included: true },
-        { name: "Python Reward Email Detection Pipeline", included: true }
-      ],
-      whyThisCost: [
-        "Requires navigating strict Google API quotas and security protocols.",
-        "Involves building robust Python parsing pipelines using Playwright/BeautifulSoup to detect and extract data."
-      ]
-    },
+    // {
+    //   id: "mod-5",
+    //   title: "Gmail Integration & Python Extraction",
+    //   description: "The authentication and synchronization layer for user emails.",
+    //   cost: 75000,
+    //   complexity: "High",
+    //   technicalNotes: ["Google OAuth 2.0", "Python Gmail API Client"],
+    //   deliverables: [
+    //     { name: "Gmail Authentication flow", included: true },
+    //     { name: "Email Synchronization Service", included: true },
+    //     { name: "Python Reward Email Detection Pipeline", included: true }
+    //   ],
+    //   whyThisCost: [
+    //     "Requires navigating strict Google API quotas and security protocols.",
+    //     "Involves building robust Python parsing pipelines using Playwright/BeautifulSoup to detect and extract data."
+    //   ]
+    // },
     {
       id: "mod-6",
       title: "Loyalty Data Normalization System",
@@ -159,7 +159,7 @@ export const proposalData: ProposalConfig = {
       id: "mod-7",
       title: "AI Assistant & Reward Intelligence",
       description: "Natural language processing for user queries and insights.",
-      cost: 40000,
+      cost: 30000,
       complexity: "Medium",
       technicalNotes: ["Python LLM orchestration", "Gemini / OpenAI"],
       deliverables: [
@@ -175,7 +175,7 @@ export const proposalData: ProposalConfig = {
       id: "mod-8",
       title: "QA, Security & Deployment",
       description: "Ensuring the platform is secure, monitored, and production-ready.",
-      cost: 45000,
+      cost: 30000,
       complexity: "Medium",
       technicalNotes: ["Docker", "Nginx", "SSL Configuration", "Monitoring"],
       deliverables: [
