@@ -171,8 +171,9 @@ export const ProposalPDF = () => (
               <Text style={{fontSize: 10, color: '#000000', marginTop: 3}}>{mod.description}</Text>
             </View>
             <View style={styles.colQty}><Text style={styles.tdText}>1</Text></View>
-            <View style={styles.colRate}><Text style={styles.tdText}>{mod.cost.toLocaleString('en-IN')}</Text></View>
-            <View style={styles.colAmount}><Text style={styles.tdBold}>{mod.cost.toLocaleString('en-IN')}</Text></View>
+            {/* Swapped ₹ for Rs. */}
+            <View style={styles.colRate}><Text style={styles.tdText}>Rs. {mod.cost.toLocaleString('en-IN')}</Text></View>
+            <View style={styles.colAmount}><Text style={styles.tdBold}>Rs. {mod.cost.toLocaleString('en-IN')}</Text></View>
           </View>
         ))}
 
@@ -180,7 +181,8 @@ export const ProposalPDF = () => (
           <View style={styles.colDesc}><Text style={[styles.tdBold, { fontSize: 13 }]}>Total Estimated Investment</Text></View>
           <View style={styles.colQty}><Text style={styles.tdText}></Text></View>
           <View style={styles.colRate}><Text style={styles.tdText}></Text></View>
-          <View style={styles.colAmount}><Text style={[styles.tdBold, { fontSize: 13 }]}>₹{proposalData.totalCost.toLocaleString('en-IN')}</Text></View>
+          {/* Swapped ₹ for Rs. */}
+          <View style={styles.colAmount}><Text style={[styles.tdBold, { fontSize: 13 }]}>Rs. {proposalData.totalCost.toLocaleString('en-IN')}</Text></View>
         </View>
       </View>
 
@@ -196,15 +198,17 @@ export const ProposalPDF = () => (
       <Text style={[styles.boldText, { fontSize: 12, marginBottom: 5 }]}>1. Payment Milestones</Text>
       {proposalData.paymentMilestones?.map((milestone, i) => (
         <Text key={i} style={styles.paragraph}>
+          {/* Swapped ₹ for Rs. */}
           <Text style={styles.boldText}>{String.fromCharCode(97 + i)}. {milestone.phase} ({milestone.percentage}%): </Text> 
-          ₹{milestone.amount.toLocaleString('en-IN')} - {milestone.description}
+          Rs. {milestone.amount.toLocaleString('en-IN')} - {milestone.description}
         </Text>
       ))}
 
       <Text style={[styles.boldText, { fontSize: 12, marginTop: 10, marginBottom: 5 }]}>2. Operational Costs & Responsibilities</Text>
       {proposalData.operationalCosts?.map((op, i) => (
         <Text key={i} style={styles.paragraph}>
-          <Text style={styles.boldText}>{op.title}: </Text> {op.description} ({op.cost})
+          {/* Automatically replaces the ₹ with Rs. dynamically just for the PDF */}
+          <Text style={styles.boldText}>{op.title}: </Text> {op.description} ({op.cost.replace('₹', 'Rs. ')})
         </Text>
       ))}
 
