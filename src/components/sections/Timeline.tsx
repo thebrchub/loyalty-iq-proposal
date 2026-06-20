@@ -76,7 +76,7 @@ export function Timeline() {
                 </li>
                 <li className="text-sm text-slate-700 flex items-start gap-2">
                   <span className="text-amber-500 font-bold">•</span>
-                  Extended edge-case debugging during live data ingestion testing.
+                  Extended edge-case debugging during data ingestion testing.
                 </li>
               </ul>
             </div>

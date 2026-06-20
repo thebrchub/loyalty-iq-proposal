@@ -19,7 +19,7 @@ export function ExecutiveSummary() {
             <div className="relative z-10 flex-grow">
               <h3 className="text-3xl font-bold text-slate-900 mb-4 tracking-tight">Platform Overview</h3>
               <p className="text-slate-600 text-lg leading-relaxed mb-10">
-                {proposalData.projectName} helps users track, understand, and optimize loyalty rewards by combining <span className="text-indigo-600 font-semibold">live web scraping</span>, <span className="text-rose-600 font-semibold">Gmail & PDF extraction</span>, data normalization, and <span className="text-sky-600 font-semibold">AI-powered insights</span> into a single unified dashboard.
+                {proposalData.projectName} helps users track, understand, and optimize loyalty rewards by combining <span className="text-indigo-600 font-semibold">scheduled portal synchronization</span>, <span className="text-rose-600 font-semibold">Gmail & PDF extraction</span>, data normalization, and <span className="text-sky-600 font-semibold">AI-powered insights</span> into a single unified dashboard.
               </p>
 
               <div className="space-y-5">

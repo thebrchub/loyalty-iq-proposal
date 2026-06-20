@@ -8,10 +8,22 @@ export const proposalData: ProposalConfig = {
   estimatedDuration: "6 Weeks",
   totalCost: 535000, 
   objectives: [
-    { title: "Demonstrate Working Product", description: "Build a highly functional, interactive platform for stakeholders to experience directly." },
-    { title: "Validate Product Concept", description: "Prove that reward aggregation solves a real user pain point through live data synchronization." },
-    { title: "Provide Real Reward Visibility", description: "Combine live portal scraping with Gmail and PDF extraction to display actual, comprehensive loyalty balances." },
-    { title: "Enable AI Insights", description: "Implement an intelligence engine to dynamically analyze rates, query rewards, and predict expiries." }
+    { 
+      title: "Demonstrate Working Product", 
+      description: "Build a highly functional, interactive platform for stakeholders to experience directly." 
+    },
+    { 
+      title: "Validate Product Concept", 
+      description: "Prove that reward aggregation solves a real user pain point through automated data extraction and aggregation." 
+    },
+    { 
+      title: "Provide Real Reward Visibility", 
+      description: "Utilize secure Gmail integration and AI-driven PDF extraction to parse and display actual, comprehensive loyalty balances." 
+    },
+    { 
+      title: "Enable AI Insights", 
+      description: "Implement an intelligence engine to dynamically analyze rates, query rewards, and predict expiries." 
+    }
   ],
 
   userJourney: [
@@ -191,10 +203,6 @@ export const proposalData: ProposalConfig = {
     {
       question: "Why use both Node.js and Python?",
       answer: "Node.js is superior for handling real-time user traffic and API requests with zero latency. Python is the industry leader for AI, data scraping, and PDF parsing. Combining them creates a high-performance, enterprise-grade architecture."
-    },
-    {
-      question: "Why use both live web scrapers and Gmail/PDF parsing?",
-      answer: "Combining both methods provides the most accurate and comprehensive data. Dedicated Python web scrapers pull live point balances directly from bank and airline portals, while Gmail and PDF parsing extracts historical data, transaction details, and credit card profiles to give a complete picture of the user's loyalty wealth."
     },
     {
       question: "Can this architecture be scaled for a full public release?",

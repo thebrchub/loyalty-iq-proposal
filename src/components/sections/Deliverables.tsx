@@ -38,9 +38,9 @@ const inScopeItems: { title: string; icon: any; color: string; bgColor: string; 
     bgColor: "bg-rose-50",
     borderColor: "border-rose-100",
     items: [
-      "Live web scraping logic for real-time portal balances.",
+      "AI-driven ingestion of static portal PDFs to map reward rules.",
       "Secure Google OAuth 2.0 Integration (Read-Only).",
-      "Automated PDF statement & SMS extraction via Python."
+      "Automated statement & SMS extraction via Python."
     ]
   },
   {
@@ -113,9 +113,9 @@ export function Deliverables() {
           </div>
           <div>
             <h4 className="font-bold text-slate-900 mb-1">Hybrid Data Architecture</h4>
-            <p className="text-sm text-slate-600 leading-relaxed">
-              We employ a dual-pronged data strategy: Python-based live web scrapers to fetch real-time bank/airline point balances, combined with secure Gmail parsing to extract historical PDFs, transaction details, and credit card profiles.
-            </p>
+           <p className="text-sm text-slate-600 leading-relaxed">
+  We employ a dual-pronged AI data strategy: Python-based ingestion of static portal PDFs to map core reward structures and conversion rates, combined with secure Gmail parsing to extract the user's specific historical statements and credit card profiles.
+</p>
           </div>
         </div>
       </div>
