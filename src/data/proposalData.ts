@@ -205,7 +205,7 @@ export const proposalData: ProposalConfig = {
     },
     {
       question: "What are the next steps after the prototype is delivered?",
-      answer: "BRC Studios LLP can transition into a dedicated engineering retainer to scale the infrastructure, build native mobile iOS and Android apps, and integrate additional bank and airline networks."
+      answer: "BRC HUB LLP can transition into a dedicated engineering retainer to scale the infrastructure, build native mobile iOS and Android apps, and integrate additional bank and airline networks."
     }
   ]
 };

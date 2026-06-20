@@ -12,7 +12,7 @@ export function Footer() {
     <footer className="mt-32 border-t border-slate-200 bg-white py-12">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
-          <h4 className="font-bold text-slate-900 text-lg">BRC Studios LLP</h4>
+          <h4 className="font-bold text-slate-900 text-lg">BRC HUB LLP</h4>
           <p className="text-slate-500 text-sm mt-1">Confidential Technical Proposal • All rights reserved.</p>
         </div>
         
