@@ -129,7 +129,7 @@ export const ProposalPDF = () => (
       </View>
       <View style={styles.bulletItem}>
         <Text style={styles.bulletPoint}>•</Text>
-       <Text style={styles.bulletText}>End-to-end execution: UI/UX, React + Vite, backend, Gmail OAuth parsing, AI document ingestion, and AI chat—one team, one roof.</Text>
+       <Text style={styles.bulletText}>End-to-end execution: UI/UX, React + Vite, backend, Gmail OAuth parsing, AI document ingestion, and AI chat, one team, one roof.</Text>
       </View>
       <View style={styles.bulletItem}>
         <Text style={styles.bulletPoint}>•</Text>

@@ -206,15 +206,12 @@ export const proposalData: ProposalConfig = {
     },
     {
       question: "Can this architecture be scaled for a full public release?",
-      answer: "Yes. The entire infrastructure—including the Node.js gateway, Python scraping workers, and PostgreSQL schema—is built to production standards and will serve as a robust, scalable foundation."
+      answer: "Yes. The entire infrastructure, including the Node.js gateway, Python scraping workers, and PostgreSQL schema, is built to production standards and will serve as a robust, scalable foundation."
     },
     {
       question: "How exactly is AI utilized in this platform?",
       answer: "We use Large Language Models via Python orchestration for two tasks: parsing complex, unstructured statement PDFs into structured JSON and powering the natural language query interface."
     },
-    {
-      question: "What are the next steps after the prototype is delivered?",
-      answer: "BRC HUB LLP can transition into a dedicated engineering retainer to scale the infrastructure, build native mobile iOS and Android apps, and integrate additional bank and airline networks."
-    }
+
   ]
 };
