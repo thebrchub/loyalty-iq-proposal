@@ -179,7 +179,7 @@ export function Deliverables() {
           <Layers className="w-7 h-7 text-indigo-600" />
           <div>
             <h3 className="text-2xl font-bold text-slate-900">Prototype Interface Scope</h3>
-            <p className="text-slate-500 text-sm mt-1">18-20 unique interfaces required to demonstrate the complete core user journey.</p>
+            <p className="text-slate-500 text-sm mt-1">up to 20 unique interfaces required to demonstrate the complete core user journey.</p>
           </div>
         </div>
 
@@ -205,7 +205,7 @@ export function Deliverables() {
         </div>
         
         <div className="mt-8 p-4 bg-slate-50 rounded-xl border border-slate-200 text-sm text-slate-600 italic leading-relaxed">
-          <strong>Note:</strong> This scope and pricing covers <strong>up to 18-20 pages/interfaces</strong>. Any additional pages beyond this scope will be charged on a per-page basis. Development effort includes component architecture, responsive behavior, Python/Node.js API integrations, robust loading states, and investor-demo visual polish beyond the visual screens themselves.
+          <strong>Note:</strong> This scope and pricing covers <strong>up to 20 pages/interfaces</strong>. Any additional pages beyond this scope will be charged on a per-page basis. Development effort includes component architecture, responsive behavior, Python/Node.js API integrations, robust loading states, and investor-demo visual polish beyond the visual screens themselves.
         </div>
       </motion.div>
 

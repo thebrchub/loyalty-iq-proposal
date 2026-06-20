@@ -56,12 +56,12 @@ export const proposalData: ProposalConfig = {
     {
       id: "mod-2",
       title: "UI/UX Design",
-      description: "Complete visual design system covering 18-20 unique user interface layouts.",
+      description: "Complete visual design system covering up to 20 unique user interface layouts.",
       cost: 50000,
       complexity: "Medium",
       technicalNotes: ["Design handoff", "Responsive layouts"],
       deliverables: [
-        { name: "18-20 High-Fidelity Prototype Screens", included: true },
+        { name: "up to 20 High-Fidelity Prototype Screens", included: true },
         { name: "Wireframes, Dashboard & Onboarding", included: true }
       ],
       whyThisCost: [
@@ -71,12 +71,12 @@ export const proposalData: ProposalConfig = {
     {
       id: "mod-3",
       title: "Frontend Application Development",
-      description: "The core React 19 web application, developing all 18-20 interactive user interfaces.",
+      description: "The core React 19 web application, developing all up to 20 interactive user interfaces.",
       cost: 175000,
       complexity: "High",
       technicalNotes: ["React 19", "Vite", "TypeScript", "Tailwind CSS v4"],
       deliverables: [
-        { name: "Development of 18-20 Interactive Screens", included: true },
+        { name: "Development of up to 20 Interactive Screens", included: true },
         { name: "Reward Dashboard & AI Assistant UI", included: true },
         { name: "Responsive Design & API Integration Layer", included: true }
       ],
@@ -161,6 +161,7 @@ export const proposalData: ProposalConfig = {
     { category: "Rewards Explorer", count: 4, screens: ["Credit Card Rewards", "Airline Miles", "Hotel Rewards", "Program Details"] },
     { category: "AI Assistant Experience", count: 2, screens: ["AI Chat Interface", "AI Insights View"] },
     { category: "Card Recommendation", count: 2, screens: ["Recommendation Screen", "Reward Opportunity View"] },
+    { category: "Premium Upgrade (Demo)", count: 2, screens: ["Pricing / Subscription Screen", "Demo Payment Integration"] },
     { category: "Completion Experience", count: 2, screens: ["Summary View", "Actionable Recommendations"] }
   ],
 
