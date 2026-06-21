@@ -204,9 +204,11 @@ export function Deliverables() {
           ))}
         </div>
         
-        <div className="mt-8 p-4 bg-slate-50 rounded-xl border border-slate-200 text-sm text-slate-600 italic leading-relaxed">
-          <strong>Note:</strong> This scope and pricing covers <strong>up to 20 pages/interfaces</strong>. Any additional pages beyond this scope will be charged on a per-page basis. Development effort includes component architecture, responsive behavior, Python/Node.js API integrations, robust loading states, and investor-demo visual polish beyond the visual screens themselves.
-        </div>
+        <div className="mt-8 p-5 bg-slate-50 rounded-xl border border-slate-200 text-sm text-slate-600 leading-relaxed shadow-sm">
+  <strong className="text-slate-900">Scope Note:</strong> This pricing covers the complete development of <strong>up to 20 core pages/interfaces</strong>. Any additional screens beyond this scope will be evaluated on a per-page basis. 
+  <br /><br />
+  Beyond standard visual development, this engineering effort explicitly includes complex component architecture, fully responsive behavior, active Python/Node.js API data binding, and <strong>premium investor-demo polish</strong>. This covers building the seamless screen transitions, skeleton loading states, graceful error handling, and interactive micro-animations required to ensure the prototype feels exactly like a live, production-ready enterprise application.
+</div>
       </motion.div>
 
       {}

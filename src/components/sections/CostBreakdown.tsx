@@ -34,13 +34,11 @@ export function CostBreakdown() {
           <h2 className="text-3xl font-bold text-slate-900 tracking-tight">Commercial Breakdown & Scope</h2>
           <p className="text-slate-500 mt-2">Transparent pricing justified by deep technical deliverables.</p>
         </div>
-        <div className="text-right">
+        
+        {}
+        <div className="text-left md:text-right">
           <div className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-1">Estimated Total</div>
           <div className="text-4xl font-extrabold text-emerald-600">₹{proposalData.totalCost.toLocaleString('en-IN')}</div>
-          {/* <div className="mt-2 inline-flex items-center gap-2 bg-indigo-50 border border-indigo-100 text-indigo-700 px-3 py-1.5 rounded-md text-sm font-medium">
-            <PenTool className="w-4 h-4" />
-            <span>₹4,85,000 if client provides UI/UX designs</span>
-          </div> */}
         </div>
       </div>
 
@@ -54,7 +52,6 @@ export function CostBreakdown() {
             key={module.id} 
             className="border border-slate-200 rounded-xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow"
           >
-            {}
             <button 
               onClick={() => toggleModule(module.id)}
               className="w-full text-left px-6 py-5 flex flex-col md:flex-row md:items-center justify-between bg-white hover:bg-slate-50 transition-colors gap-4"
@@ -82,7 +79,6 @@ export function CostBreakdown() {
               </div>
             </button>
 
-            {}
             <AnimatePresence>
               {openModule === module.id && (
                 <motion.div
@@ -94,7 +90,6 @@ export function CostBreakdown() {
                 >
                   <div className="p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
                     
-                    {}
                     <div>
                       <h4 className="flex items-center gap-2 text-sm font-bold text-slate-900 uppercase tracking-wider mb-4">
                         <CheckCircle2 className="w-4 h-4 text-emerald-600" />
@@ -122,7 +117,6 @@ export function CostBreakdown() {
                       </div>
                     </div>
 
-                    {}
                     <div className="bg-white p-6 rounded-xl border border-indigo-100 shadow-sm relative overflow-hidden">
                       <div className="absolute top-0 left-0 w-1 h-full bg-indigo-500"></div>
                       

@@ -12,7 +12,6 @@ export function ExecutiveSummary() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
         
-        {}
         <div className="lg:col-span-5">
           <div className="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-xl relative h-full flex flex-col">
             
@@ -24,23 +23,22 @@ export function ExecutiveSummary() {
 
               <div className="space-y-5">
                 <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest">Supported Data Domains</h4>
-                <div className="flex flex-wrap gap-4">
-                  <div className="flex items-center gap-3 px-5 py-3 bg-slate-50 rounded-xl border border-slate-100 shadow-sm">
-                    <CreditCard className="w-5 h-5 text-indigo-500" />
+                <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 sm:gap-4">
+                  <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3 px-3 sm:px-5 py-3 bg-slate-50 rounded-xl border border-slate-100 shadow-sm">
+                    <CreditCard className="w-5 h-5 text-indigo-500 shrink-0" />
                     <span className="text-sm font-bold text-slate-700">Banks</span>
                   </div>
-                  <div className="flex items-center gap-3 px-5 py-3 bg-slate-50 rounded-xl border border-slate-100 shadow-sm">
-                    <Plane className="w-5 h-5 text-sky-500" />
+                  <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3 px-3 sm:px-5 py-3 bg-slate-50 rounded-xl border border-slate-100 shadow-sm">
+                    <Plane className="w-5 h-5 text-sky-500 shrink-0" />
                     <span className="text-sm font-bold text-slate-700">Airlines</span>
                   </div>
-                  <div className="flex items-center gap-3 px-5 py-3 bg-slate-50 rounded-xl border border-slate-100 shadow-sm">
-                    <Building2 className="w-5 h-5 text-emerald-500" />
+                  <div className="col-span-2 sm:col-span-1 flex items-center justify-center sm:justify-start gap-2 sm:gap-3 px-3 sm:px-5 py-3 bg-slate-50 rounded-xl border border-slate-100 shadow-sm">
+                    <Building2 className="w-5 h-5 text-emerald-500 shrink-0" />
                     <span className="text-sm font-bold text-slate-700">Hotels</span>
                   </div>
                 </div>
               </div>
 
-              {}
               <div className="mt-12 pt-10 border-t border-slate-100">
                 <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">System Capabilities</h4>
                 <ul className="space-y-6">
@@ -78,10 +76,8 @@ export function ExecutiveSummary() {
           </div>
         </div>
 
-        {}
         <div className="lg:col-span-7 flex flex-col justify-between space-y-10">
           
-          {}
           <div>
             <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
               <Target className="w-7 h-7 text-emerald-600" />
@@ -108,7 +104,6 @@ export function ExecutiveSummary() {
             </div>
           </div>
 
-          {}
           <div className="bg-slate-50 rounded-3xl p-8 border border-slate-200 shadow-sm">
             <h3 className="text-xl font-bold text-slate-900 mb-6">Core Engineering Strategy</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
