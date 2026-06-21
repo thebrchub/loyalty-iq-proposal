@@ -112,7 +112,7 @@ export function Hero() {
         </div>
       </section>
 
-      {/* PDF Preview Modal */}
+      {}
       <AnimatePresence>
         {showPreview && (
           <motion.div 

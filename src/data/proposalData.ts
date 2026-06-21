@@ -165,7 +165,6 @@ export const proposalData: ProposalConfig = {
     }
   ],
 
-  // NEW: Interface Breakdown Data
   prototypeInterfaces: [
     { category: "Welcome & Introduction", count: 2, screens: ["Welcome Screen", "Product Overview"] },
     { category: "Gmail Connection Journey", count: 2, screens: ["Connect Google Account", "Permissions & Auth"] },
@@ -201,17 +200,24 @@ export const proposalData: ProposalConfig = {
 
   faqs: [
     {
-      question: "Why use both Node.js and Python?",
-      answer: "Node.js is superior for handling real-time user traffic and API requests with zero latency. Python is the industry leader for AI, data scraping, and PDF parsing. Combining them creates a high-performance, enterprise-grade architecture."
+      question: "Why utilize a dual-stack architecture (Node.js + Python) instead of a single monolith?",
+      answer: "Node.js operates as our high-throughput API gateway, delivering near-zero latency for the React frontend and managing concurrent user sessions. Python handles the heavy computational workloads, specifically AI document ingestion, secure PDF parsing, and LLM orchestration. This decoupled approach prevents intensive AI extraction tasks from blocking the main event loop, ensuring enterprise-grade stability."
     },
     {
-      question: "Can this architecture be scaled for a full public release?",
-      answer: "Yes. The entire infrastructure, including the Node.js gateway, Python scraping workers, and PostgreSQL schema, is built to production standards and will serve as a robust, scalable foundation."
+      question: "Why utilize AI document ingestion over traditional live web scrapers?",
+      answer: "Live web scrapers are inherently fragile. They frequently break due to minor UI updates or bot-mitigation tools on bank/airline portals, creating massive maintenance overhead. By utilizing Python-based AI ingestion of static reward structure PDFs, we build a highly stable, deterministic knowledge base. This ensures the platform and investor demo perform flawlessly without relying on volatile third-party DOM structures."
     },
     {
-      question: "How exactly is AI utilized in this platform?",
-      answer: "We use Large Language Models via Python orchestration for two tasks: parsing complex, unstructured statement PDFs into structured JSON and powering the natural language query interface."
+      question: "How do you ensure the AI doesn't hallucinate reward balances or conversion rules?",
+      answer: "We strictly use Large Language Models (LLMs) as parsing engines, not databases. The Python orchestrator feeds unstructured PDFs to the AI with strict system prompts to extract specific entities into deterministic JSON. Once validated, this data is stored locally in PostgreSQL. The AI chat interface then queries this hard database using RAG (Retrieval-Augmented Generation), guaranteeing 100% factual, hallucination-free reporting."
     },
-
+    {
+      question: "How is user data secured during the Gmail OAuth extraction process?",
+      answer: "The system utilizes strict Google OAuth 2.0 protocols with restricted, read-only scopes. Document parsing is executed in isolated Python worker environments to extract relevant historical statements. Once the unstructured statements are normalized into structured financial data in our PostgreSQL database, the temporary files are cleared. We do not use user PII to train any external AI models."
+    },
+    {
+      question: "Can this architecture scale directly into the production Phase 1 build?",
+      answer: "Absolutely. We do not write 'throwaway' prototype code. The infrastructure relies on stateless Python extraction workers, a standardized PostgreSQL schema, and a modern React 19 / Vite frontend. When transitioning to a public release, this architecture simply requires horizontal scaling of the Python worker nodes and standard load balancing, rather than a fundamental rewrite."
+    }
   ]
 };

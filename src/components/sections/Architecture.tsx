@@ -24,13 +24,11 @@ export function Architecture() {
         <p className="text-slate-500 mt-2">High-level data flow and processing pipelines for the MVP.</p>
       </div>
 
-      {}
       <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
         <h3 className="text-xl font-bold text-slate-900 mb-8">Primary User Workflow</h3>
         
-        {}
         <div className="overflow-x-auto pb-4">
-          <div className="flex flex-col md:flex-row items-center justify-start md:justify-between min-w-[800px] gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-start md:justify-between w-full md:min-w-[800px] gap-4">
             <FlowNode icon={User} title="User" color="slate" />
             <ArrowRight className="w-5 h-5 text-slate-300 hidden md:block" />
             <ArrowDown className="w-5 h-5 text-slate-300 md:hidden" />
@@ -39,7 +37,7 @@ export function Architecture() {
             <ArrowRight className="w-5 h-5 text-slate-300 hidden md:block" />
             <ArrowDown className="w-5 h-5 text-slate-300 md:hidden" />
             
-            <FlowNode icon={Server} title="Backend Services" subtitle="Node.js" color="slate" />
+            <FlowNode icon={Server} title="Backend Services" subtitle="Node.js & Python" color="slate" />
             <ArrowRight className="w-5 h-5 text-slate-300 hidden md:block" />
             <ArrowDown className="w-5 h-5 text-slate-300 md:hidden" />
             
@@ -55,7 +53,6 @@ export function Architecture() {
           </div>
         </div>
 
-        {}
         <div className="mt-8 pt-8 border-t border-slate-100 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h4 className="font-bold text-slate-900 flex items-center gap-2 mb-3">
@@ -84,21 +81,18 @@ export function Architecture() {
             </h4>
             <p className="text-sm text-slate-600 leading-relaxed">
               <strong>How:</strong> Relational PostgreSQL database mapping Users to dynamic Reward Entities.<br/><br/>
-              {}
               <strong>Why:</strong> Loyalty programs are highly structured but relational (User &rarr; Airline &rarr; Points &rarr; Expiry). NoSQL would lead to data fragmentation; Postgres ensures ACID compliance.
             </p>
           </div>
         </div>
       </div>
 
-      {}
       <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
         <h3 className="text-xl font-bold text-slate-900 mb-2">Operations Data Pipeline</h3>
         <p className="text-sm text-slate-500 mb-8">Monthly batch processing architecture for unstructured reward statements.</p>
         
-        {}
         <div className="overflow-x-auto pb-4">
-          <div className="flex flex-col md:flex-row items-center justify-start md:justify-between min-w-[800px] gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-start md:justify-between w-full md:min-w-[800px] gap-4">
             <FlowNode icon={Users} title="Ops Team" color="slate" />
             <ArrowRight className="w-5 h-5 text-slate-300 hidden md:block" />
             <ArrowDown className="w-5 h-5 text-slate-300 md:hidden" />
@@ -119,7 +113,6 @@ export function Architecture() {
           </div>
         </div>
 
-        {}
         <div className="mt-8 pt-8 border-t border-slate-100 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h4 className="font-bold text-slate-900 flex items-center gap-2 mb-3">

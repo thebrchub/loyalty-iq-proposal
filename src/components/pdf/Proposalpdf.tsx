@@ -3,8 +3,7 @@ import { proposalData } from '../../data/proposalData';
 
 const styles = StyleSheet.create({
   page: { padding: 40, fontFamily: 'Helvetica', backgroundColor: '#FFFFFF', paddingBottom: 80 },
-  
-  // Primary Header (Page 1 Only)
+
   primaryHeaderContainer: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', borderBottomWidth: 2, borderBottomColor: '#000000', paddingBottom: 15, marginBottom: 25 },
   brandContainer: { flexDirection: 'row', alignItems: 'center' },
   logo: { width: 40, height: 40, objectFit: 'contain', marginRight: 12 },
@@ -13,18 +12,15 @@ const styles = StyleSheet.create({
   quoteTitle: { fontSize: 20, fontFamily: 'Helvetica-Bold', color: '#000000', letterSpacing: 1, marginBottom: 4 },
   quoteText: { fontSize: 10, color: '#000000', marginBottom: 3, fontFamily: 'Helvetica-Bold' },
 
-  // Secondary Header (Pages 2+)
   secondaryHeaderContainer: { flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1, borderBottomColor: '#CBD5E1', paddingBottom: 10, marginBottom: 25 },
   secondaryHeaderText: { fontSize: 9, color: '#64748B', fontFamily: 'Helvetica-Bold', textTransform: 'uppercase', letterSpacing: 0.5 },
-  
-  // Client Info Box
+
   clientBox: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 30 },
   clientCol: { width: '45%' },
   clientLabel: { fontSize: 9, color: '#000000', fontFamily: 'Helvetica-Bold', marginBottom: 5, textTransform: 'uppercase', letterSpacing: 0.5 },
   clientValueTitle: { fontSize: 13, fontFamily: 'Helvetica-Bold', color: '#000000', marginBottom: 3 },
   clientValueText: { fontSize: 11, color: '#000000', lineHeight: 1.4 },
 
-  // Typography
   sectionTitle: { fontSize: 14, fontFamily: 'Helvetica-Bold', color: '#000000', textTransform: 'uppercase', letterSpacing: 0.5, borderBottomWidth: 1, borderBottomColor: '#000000', paddingBottom: 5, marginBottom: 15, marginTop: 20 },
   paragraph: { fontSize: 11, color: '#000000', lineHeight: 1.6, marginBottom: 10 },
   bulletItem: { flexDirection: 'row', marginBottom: 8, paddingLeft: 5 },
@@ -32,7 +28,6 @@ const styles = StyleSheet.create({
   bulletText: { flex: 1, fontSize: 11, color: '#000000', lineHeight: 1.5 },
   boldText: { fontFamily: 'Helvetica-Bold', color: '#000000' },
 
-  // Table Styles
   table: { width: '100%', marginBottom: 30, marginTop: 10 },
   tableHeader: { flexDirection: 'row', backgroundColor: '#F1F5F9', borderBottomWidth: 2, borderBottomColor: '#000000', paddingVertical: 8, paddingHorizontal: 5 },
   tableRow: { flexDirection: 'row', borderBottomWidth: 1, borderBottomColor: '#CBD5E1', paddingVertical: 10, paddingHorizontal: 5 },
@@ -45,21 +40,18 @@ const styles = StyleSheet.create({
   tdText: { fontSize: 11, color: '#000000' },
   tdBold: { fontSize: 11, fontFamily: 'Helvetica-Bold', color: '#000000' },
 
-  // Signatures
   signatureSection: { flexDirection: 'row', justifyContent: 'space-between', marginTop: 60, paddingTop: 20 },
   sigBox: { width: '40%' },
   sigLine: { borderBottomWidth: 1, borderBottomColor: '#000000', height: 40, marginBottom: 5 },
   sigName: { fontSize: 12, fontFamily: 'Helvetica-Bold', color: '#000000' },
   sigTitle: { fontSize: 10, color: '#000000', textTransform: 'uppercase', marginTop: 3 },
 
-  // Page Footer (Initial Blocks)
   pageFooter: { position: 'absolute', bottom: 30, left: 40, right: 40, flexDirection: 'row', justifyContent: 'space-between', borderTopWidth: 1, borderTopColor: '#CBD5E1', paddingTop: 10 },
   footerText: { fontSize: 9, color: '#000000', fontFamily: 'Helvetica-Bold' },
   initialsBox: { flexDirection: 'row', gap: 20 },
   initialLine: { fontSize: 9, color: '#000000', fontFamily: 'Helvetica-Bold' }
 });
 
-// Primary Header for Page 1
 const PrimaryHeader = () => (
   <View style={styles.primaryHeaderContainer}>
     <View style={styles.brandContainer}>
@@ -75,7 +67,6 @@ const PrimaryHeader = () => (
   </View>
 );
 
-// Secondary Header for Pages 2+
 const SecondaryHeader = () => (
   <View style={styles.secondaryHeaderContainer}>
     <Text style={styles.secondaryHeaderText}>{proposalData.projectName} • Technical Proposal</Text>
@@ -83,7 +74,6 @@ const SecondaryHeader = () => (
   </View>
 );
 
-// Reusable Footer Component
 const DocumentFooter = ({ pageNumber }: { pageNumber: string }) => (
   <View style={styles.pageFooter} fixed>
     <Text style={styles.footerText}>Confidential • BRC HUB LLP • Page {pageNumber}</Text>
@@ -96,7 +86,7 @@ const DocumentFooter = ({ pageNumber }: { pageNumber: string }) => (
 
 export const ProposalPDF = () => (
   <Document>
-    {/* PAGE 1: OBJECTIVES & WHY US */}
+    {}
     <Page size="A4" style={styles.page}>
       <PrimaryHeader />
       
@@ -143,7 +133,7 @@ export const ProposalPDF = () => (
       <DocumentFooter pageNumber="1" />
     </Page>
 
-    {/* PAGE 2: TIMELINE & COMMERCIAL BREAKDOWN */}
+    {}
     <Page size="A4" style={styles.page}>
       <SecondaryHeader />
       
@@ -171,7 +161,7 @@ export const ProposalPDF = () => (
               <Text style={{fontSize: 10, color: '#000000', marginTop: 3}}>{mod.description}</Text>
             </View>
             <View style={styles.colQty}><Text style={styles.tdText}>1</Text></View>
-            {/* Swapped ₹ for Rs. */}
+            {}
             <View style={styles.colRate}><Text style={styles.tdText}>Rs. {mod.cost.toLocaleString('en-IN')}</Text></View>
             <View style={styles.colAmount}><Text style={styles.tdBold}>Rs. {mod.cost.toLocaleString('en-IN')}</Text></View>
           </View>
@@ -181,7 +171,7 @@ export const ProposalPDF = () => (
           <View style={styles.colDesc}><Text style={[styles.tdBold, { fontSize: 13 }]}>Total Estimated Investment</Text></View>
           <View style={styles.colQty}><Text style={styles.tdText}></Text></View>
           <View style={styles.colRate}><Text style={styles.tdText}></Text></View>
-          {/* Swapped ₹ for Rs. */}
+          {}
           <View style={styles.colAmount}><Text style={[styles.tdBold, { fontSize: 13 }]}>Rs. {proposalData.totalCost.toLocaleString('en-IN')}</Text></View>
         </View>
       </View>
@@ -189,7 +179,7 @@ export const ProposalPDF = () => (
       <DocumentFooter pageNumber="2" />
     </Page>
 
-    {/* PAGE 3: TERMS & SIGNATURES */}
+    {}
     <Page size="A4" style={styles.page}>
       <SecondaryHeader />
       
@@ -198,7 +188,7 @@ export const ProposalPDF = () => (
       <Text style={[styles.boldText, { fontSize: 12, marginBottom: 5 }]}>1. Payment Milestones</Text>
       {proposalData.paymentMilestones?.map((milestone, i) => (
         <Text key={i} style={styles.paragraph}>
-          {/* Swapped ₹ for Rs. */}
+          {}
           <Text style={styles.boldText}>{String.fromCharCode(97 + i)}. {milestone.phase} ({milestone.percentage}%): </Text> 
           Rs. {milestone.amount.toLocaleString('en-IN')} - {milestone.description}
         </Text>
@@ -207,7 +197,7 @@ export const ProposalPDF = () => (
       <Text style={[styles.boldText, { fontSize: 12, marginTop: 10, marginBottom: 5 }]}>2. Operational Costs & Responsibilities</Text>
       {proposalData.operationalCosts?.map((op, i) => (
         <Text key={i} style={styles.paragraph}>
-          {/* Automatically replaces the ₹ with Rs. dynamically just for the PDF */}
+          {}
           <Text style={styles.boldText}>{op.title}: </Text> {op.description} ({op.cost.replace('₹', 'Rs. ')})
         </Text>
       ))}
@@ -217,7 +207,7 @@ export const ProposalPDF = () => (
         All custom code, UI designs, and assets transfer fully to the client upon receipt of final payment. The prototype architecture is production-quality and designed to transition directly into future phases.
       </Text>
 
-      {/* Main Signature Block */}
+      {}
       <View style={styles.signatureSection}>
         <View style={styles.sigBox}>
           <Text style={[styles.sigName, { marginBottom: 30 }]}>Client Acceptance</Text>

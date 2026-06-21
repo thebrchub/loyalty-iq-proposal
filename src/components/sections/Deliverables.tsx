@@ -93,7 +93,7 @@ export function Deliverables() {
         </div>
       </div>
 
-      {/* Strategic Callouts */}
+      {}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-indigo-50/50 border border-indigo-100 rounded-2xl p-6 flex gap-4">
           <div className="shrink-0 mt-1">
@@ -120,7 +120,7 @@ export function Deliverables() {
         </div>
       </div>
 
-      {/* In-Scope Grid */}
+      {}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {inScopeItems.map((group, index) => {
           const Icon = group.icon;
@@ -168,7 +168,7 @@ export function Deliverables() {
         })}
       </div>
 
-      {/* Prototype Interface Scope */}
+      {}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -209,7 +209,7 @@ export function Deliverables() {
         </div>
       </motion.div>
 
-      {/* Explicitly Out of Scope */}
+      {}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
