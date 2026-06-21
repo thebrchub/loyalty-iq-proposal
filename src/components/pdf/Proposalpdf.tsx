@@ -1,4 +1,4 @@
-import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
+import { Document, Page, Text, View, StyleSheet, Image, Link } from '@react-pdf/renderer';
 import { proposalData } from '../../data/proposalData';
 
 const styles = StyleSheet.create({
@@ -174,7 +174,21 @@ export const ProposalPDF = () => (
           {}
           <View style={styles.colAmount}><Text style={[styles.tdBold, { fontSize: 13 }]}>Rs. {proposalData.totalCost.toLocaleString('en-IN')}</Text></View>
         </View>
+
+        
       </View>
+
+      <Text style={styles.sectionTitle}>Scope Verification & Next Steps</Text>
+<Text style={styles.paragraph}>
+  All technical specifications, architectures, and implementation details outlined in this document are property of{' '}
+  <Link 
+    src="https://danesh-proposal.brchub.tech/" 
+    style={{ color: '#4F46E5', textDecoration: 'underline', fontFamily: 'Helvetica-Bold' }}
+  >
+    danesh-proposal.brchub.tech
+  </Link>
+  {' '}and serve as the foundational proposal. We kindly request that you review these details thoroughly for accuracy before proceeding with the execution of this quotation. Upon formal approval, we will provide a comprehensive Statement of Work (SOW) detailing the complete project scope, technical roadmap, and architectural deliverables for your final sign-off prior to the commencement of development.
+</Text>
 
       <DocumentFooter pageNumber="2" />
     </Page>
