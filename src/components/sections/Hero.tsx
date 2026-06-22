@@ -22,12 +22,14 @@ export function Hero() {
             className="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full mb-5 lg:mb-6 pb-6 border-b border-slate-100 gap-6"
           >
             <div className="flex items-center gap-4">
-              <img src="/logo.png" alt="BRC HUB LLP Logo" className="h-10 w-auto object-contain" />
-              <div className="hidden sm:block border-l border-slate-200 pl-4">
-                <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Prepared By</div>
-                <div className="text-sm font-bold text-slate-900">BRC HUB LLP</div>
-              </div>
-            </div>
+  <a href="https://www.brchub.tech" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
+    <img src="/logo.png" alt="BRC HUB LLP Logo" className="h-10 w-auto object-contain" />
+    <div className="hidden sm:block border-l border-slate-200 pl-4">
+      <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Prepared By</div>
+      <div className="text-sm font-bold text-slate-900">BRC HUB LLP</div>
+    </div>
+  </a>
+</div>
             
             <div className="sm:text-right">
               <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Prepared For</div>
