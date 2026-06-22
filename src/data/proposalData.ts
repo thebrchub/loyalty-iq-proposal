@@ -185,11 +185,36 @@ export const proposalData: ProposalConfig = {
   ],
 
  paymentMilestones: [
-    { phase: "Advance Payment", percentage: 25, amount: 133750, description: "Upon SOW signing, before development begins. Covers project setup and architecture kickoff." },
-    { phase: "Milestone 1", percentage: 25, amount: 133750, description: "Upon completion and client approval of all UI/UX screen designs and architecture sign-off." },
-    { phase: "Milestone 2", percentage: 25, amount: 133750, description: "Upon delivery of core web app with Gmail OAuth integration and Loyalty Dashboard functional." },
-    { phase: "Milestone 3", percentage: 15, amount: 80250, description: "Upon completion of Python extraction pipelines and AI Assistant integration." },
-    { phase: "Final Release", percentage: 10, amount: 53500, description: "Upon final QA sign-off, deployment to live URL, and client acceptance." }
+    {
+      phase: "Advance Payment",
+      percentage: 20,
+      amount: 107000,
+      description: "Upon SOW signing, before development begins. Covers project setup and architecture kickoff."
+    },
+    {
+      phase: "Milestone 1",
+      percentage: 20,
+      amount: 107000,
+      description: "Upon completion and client approval of all UI/UX screen designs and architecture sign-off."
+    },
+    {
+      phase: "Milestone 2",
+      percentage: 25,
+      amount: 133750,
+      description: "Upon delivery of core web app with Gmail OAuth integration and Loyalty Dashboard functional."
+    },
+    {
+      phase: "Milestone 3",
+      percentage: 20,
+      amount: 107000,
+      description: "Upon completion of Python extraction pipelines and AI Assistant integration."
+    },
+    {
+      phase: "Final Release",
+      percentage: 15,
+      amount: 80250,
+      description: "Upon final QA sign-off, deployment to live URL, and client acceptance."
+    }
   ],
 
   operationalCosts: [

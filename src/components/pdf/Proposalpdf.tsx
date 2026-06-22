@@ -86,7 +86,7 @@ const DocumentFooter = ({ pageNumber }: { pageNumber: string }) => (
 
 export const ProposalPDF = () => (
   <Document>
-    {}
+    
     <Page size="A4" style={styles.page}>
       <PrimaryHeader />
       
@@ -133,7 +133,7 @@ export const ProposalPDF = () => (
       <DocumentFooter pageNumber="1" />
     </Page>
 
-    {}
+    
     <Page size="A4" style={styles.page}>
       <SecondaryHeader />
       
@@ -161,7 +161,7 @@ export const ProposalPDF = () => (
               <Text style={{fontSize: 10, color: '#000000', marginTop: 3}}>{mod.description}</Text>
             </View>
             <View style={styles.colQty}><Text style={styles.tdText}>1</Text></View>
-            {}
+            
             <View style={styles.colRate}><Text style={styles.tdText}>Rs. {mod.cost.toLocaleString('en-IN')}</Text></View>
             <View style={styles.colAmount}><Text style={styles.tdBold}>Rs. {mod.cost.toLocaleString('en-IN')}</Text></View>
           </View>
@@ -171,7 +171,7 @@ export const ProposalPDF = () => (
           <View style={styles.colDesc}><Text style={[styles.tdBold, { fontSize: 13 }]}>Total Estimated Investment</Text></View>
           <View style={styles.colQty}><Text style={styles.tdText}></Text></View>
           <View style={styles.colRate}><Text style={styles.tdText}></Text></View>
-          {}
+          
           <View style={styles.colAmount}><Text style={[styles.tdBold, { fontSize: 13 }]}>Rs. {proposalData.totalCost.toLocaleString('en-IN')}</Text></View>
         </View>
 
@@ -193,7 +193,7 @@ export const ProposalPDF = () => (
       <DocumentFooter pageNumber="2" />
     </Page>
 
-    {}
+    
     <Page size="A4" style={styles.page}>
       <SecondaryHeader />
       
@@ -202,7 +202,7 @@ export const ProposalPDF = () => (
       <Text style={[styles.boldText, { fontSize: 12, marginBottom: 5 }]}>1. Payment Milestones</Text>
       {proposalData.paymentMilestones?.map((milestone, i) => (
         <Text key={i} style={styles.paragraph}>
-          {}
+          
           <Text style={styles.boldText}>{String.fromCharCode(97 + i)}. {milestone.phase} ({milestone.percentage}%): </Text> 
           Rs. {milestone.amount.toLocaleString('en-IN')} - {milestone.description}
         </Text>
@@ -211,17 +211,21 @@ export const ProposalPDF = () => (
       <Text style={[styles.boldText, { fontSize: 12, marginTop: 10, marginBottom: 5 }]}>2. Operational Costs & Responsibilities</Text>
       {proposalData.operationalCosts?.map((op, i) => (
         <Text key={i} style={styles.paragraph}>
-          {}
+          
           <Text style={styles.boldText}>{op.title}: </Text> {op.description} ({op.cost.replace('₹', 'Rs. ')})
         </Text>
       ))}
 
+
       <Text style={[styles.boldText, { fontSize: 12, marginTop: 10, marginBottom: 5 }]}>3. Intellectual Property & Code Ownership</Text>
       <Text style={styles.paragraph}>
-        All custom code, UI designs, and assets transfer fully to the client upon receipt of final payment. The prototype architecture is production-quality and designed to transition directly into future phases.
+        All custom source code, UI/UX designs, branding, and project-specific deliverables become the exclusive intellectual property of the Client. BRC HUB LLP claims no ownership over the LoyaltyIQ product. The Client receives perpetual, irrevocable rights to use, modify, and commercialize the platform, subject to standard third-party component licenses.
+      </Text>
+      <Text style={styles.paragraph}>
+        Note: BRC HUB LLP reserves the right to suspend active development or deployment in the event of overdue milestone payments. However, such suspension does not affect the Client's underlying IP ownership rights once accounts are settled.
       </Text>
 
-      {}
+      
       <View style={styles.signatureSection}>
         <View style={styles.sigBox}>
           <Text style={[styles.sigName, { marginBottom: 30 }]}>Client Acceptance</Text>
